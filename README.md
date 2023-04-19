@@ -1,5 +1,5 @@
 # cse210-student-template
-Jared Keh for students in CSE 210.
+Jared Keh
 
 This repository contains the starter code for many different projects. They are arranged as follows:
 
