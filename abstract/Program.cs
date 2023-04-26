@@ -6,3 +6,5 @@ Book HungerGames = new Book("Hunger Games", "Suzanne Collins");
 
 mistborn.Display();
 HungerGames.Display();
+
+Console.WriteLine(mistborn.IsAvailable());
