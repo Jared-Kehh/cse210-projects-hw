@@ -21,14 +21,12 @@ class Program
         job1._endYear = 2022;
         job2._endYear = 2023;
 
-        resume name = new resume();
+        Resume name = new Resume();
 
         name._name = "Jared Keh";
+        name._jobs.Add(job1);
+        name._jobs.Add(job2);
 
         name.display();
-        job1.display();
-        job2.display();
-
-
     }
 }
