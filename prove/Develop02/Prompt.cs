@@ -1,15 +1,13 @@
 public class Prompt{
 
+    private string _entry ="";
 
-    List<string> _usedPrompts = new List<string>();
-    List<string> _prompts = new List<string>();
-
-    public Prompt(){
-        _prompts.Add("How was your day");
+    public Prompt(string entry){
+        _entry = entry;
     }
 
-    public string GetRandomPrompt(){
-        return "this is a prompt";
+    public string GetJournal(){
+        return _entry;
     }
 
 

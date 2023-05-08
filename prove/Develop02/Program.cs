@@ -4,9 +4,13 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop02 World!");
-        Console.Write("This is your entry for today: {}");
-        string entry = Console.ReadLine();
+        Display _display = new Display();
+        _display.AddEntry(new Prompt("Today I had hash browns!"));
+        _display.AddEntry(new Prompt("Yesterday was sunday and I went to church."));
+
+        Menu _menu = new Menu(_display);
+
+        _menu.DisplayMenu();
         
     }
 }
