@@ -1,18 +1,19 @@
 public class Display{
     List<Prompt> _prompt = new List<Prompt>();
+    List<Journal> _journal = new List<Journal>();
 
     private void PrettyPrint(string item)
     {
-        Console.WriteLine("<==========================>");
+        Console.WriteLine("**************************");
         Console.WriteLine($"{item}");
-        Console.WriteLine("<==========================>");
+        Console.WriteLine("**************************");
     }
 
     public void JournalEntries()
     {
-        foreach (Prompt prompt in _prompt)
+        foreach (Journal journal in _journal)
         {
-            PrettyPrint(prompt.GetJournal());
+            PrettyPrint(journal.GetJournals());
         }
     }
 
@@ -20,8 +21,13 @@ public class Display{
     {
         _prompt.Add(prompt);
     }
+
+    public void AddJournal(Journal journal){
+        _journal.Add(journal);
+
+    }
     
-    public void GetRandomEntry()
+    public void GetRandomPrompt()
     {
         var random = new Random();
         var randomNumber = random.Next(0, _prompt.Count);

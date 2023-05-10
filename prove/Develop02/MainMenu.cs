@@ -14,7 +14,7 @@ public class Menu{
         {
             while(options.Contains(response)==false)
             {
-                Console.Write("1. Write\n2. Display\n3. Random Entry\n4. Load\n5. Quit\n\nWhat is your request? ");
+                Console.Write("1. Write\n2. Display\n3. Save\n4. Load\n5. Quit\n\nWhat is your request? ");
                 response = Console.ReadLine() ?? String.Empty;
                 response = response.ToUpper();
             }
@@ -24,17 +24,17 @@ public class Menu{
                     Environment.Exit(0);
                     break;
                 case "1":
-                    Console.Write("Please Enter New Journal Entry: ");
-                    string newEntry = Console.ReadLine() ?? String.Empty;
-
-                    _display.AddEntry(new Prompt(newEntry));
+                    _display.GetRandomPrompt();
+                    Console.Write("");
+                    string journalEntry = Console.ReadLine();
+                    _display.AddJournal(new Journal(journalEntry));
                     break;
                 
                 case "2":
                     _display.JournalEntries();
                     break;
                 case "3":
-                    _display.GetRandomEntry();
+                    _display.GetRandomPrompt();
                     break;
             }
             response="";

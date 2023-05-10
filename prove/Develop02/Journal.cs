@@ -1,12 +1,12 @@
-public class Prompt{
+public class Journal{
 
     private string _entry ="";
 
-    public Prompt(string entry){
+    public Journal(string entry){
         _entry = entry;
     }
 
-    public string GetJournal(){
+    public string GetJournals(){
         return _entry;
     }
 
