@@ -7,6 +7,8 @@ public class Display{
         foreach (Journal journal in _journal)
         {
             Console.WriteLine(journal.GetJournals());
+            DateTime currentDateTime = DateTime.Now;
+            Console.WriteLine(currentDateTime);
         }
     }
 
