@@ -1,9 +1,19 @@
 public class Menu{
     private Display _display;
+    private Prompt _prompt;
+    private Journal _journal;
 
     public Menu(Display display)
     {
         _display = display;
+    }
+    public Menu(Prompt prompt)
+    {
+        _prompt = prompt;
+    }
+    public Menu(Journal journal)
+    {
+        _journal = journal;
     }
 
     public void DisplayMenu()
@@ -24,7 +34,7 @@ public class Menu{
                     Environment.Exit(0);
                     break;
                 case "1":
-                    _display.GetRandomPrompt();
+                    _display.GetRandomEntry();
                     Console.Write("");
                     string journalEntry = Console.ReadLine();
                     _display.AddJournal(new Journal(journalEntry));
@@ -34,7 +44,8 @@ public class Menu{
                     _display.JournalEntries();
                     break;
                 case "3":
-                    _display.GetRandomPrompt();
+                    break;
+                case "4":
                     break;
             }
             response="";
