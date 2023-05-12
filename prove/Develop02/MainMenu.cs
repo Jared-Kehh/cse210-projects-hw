@@ -19,7 +19,7 @@ public class Menu{
     public void DisplayMenu()
     {
         string response = "";
-        string[] options = {"1", "2", "5", "3"};
+        string[] options = {"1", "2", "5", "3", "4"};
         while(response!="5")
         {
             while(options.Contains(response)==false)
@@ -44,8 +44,10 @@ public class Menu{
                     _display.JournalEntries();
                     break;
                 case "3":
+                _display.saveJournal();
                     break;
                 case "4":
+                // _display.loadJournal();
                     break;
             }
             response="";

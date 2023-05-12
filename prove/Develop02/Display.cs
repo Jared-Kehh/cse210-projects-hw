@@ -8,7 +8,8 @@ public class Display{
         {
             Console.WriteLine(journal.GetJournals());
             DateTime currentDateTime = DateTime.Now;
-            Console.WriteLine(currentDateTime);
+            string dateText = currentDateTime.ToShortDateString();
+            Console.WriteLine(dateText);
         }
     }
 
@@ -28,4 +29,44 @@ public class Display{
         Console.WriteLine(_prompt[randomNumber].GetJournal());
     }
 
+    public void saveJournal(){
+        DateTime currentDateTime = DateTime.Now;
+        string dateText = currentDateTime.ToShortDateString();
+        Console.WriteLine("What do you want to call the file?");
+        string nameFile = Console.ReadLine();
+        if (File.Exists(nameFile)){
+            Console.WriteLine("It exists.");
+            StreamWriter appendable = new StreamWriter("./"+nameFile, true);
+            foreach(var journal in _journal){
+                appendable.WriteLine(journal.GetJournals());
+                appendable.WriteLine(dateText);
+            }}
+        else{
+        using (StreamWriter outputFile = new StreamWriter(nameFile))
+        {
+           foreach (Journal journal in _journal)    
+        {
+            outputFile.WriteLine(journal.GetJournals());
+            outputFile.WriteLine(dateText);
+        }
+        }}
+
+    public void loadJournal(){
+                Console.WriteLine("What is the file name called?");
+                string loadFile = "journal.txt";
+                string [] lines = File.ReadAllLines(loadFile);
+                List<string> pieces = new List<string>();
+                    foreach (string line in lines)
+                     {
+                        if(line.Length != 0){
+                             if(pieces.Count == 2){
+                                 var newJournal = new Journal(pieces[0],pieces[1]);
+                                 _journal.Add(newJournal);
+                                 pieces.Clear();
+                             }
+                             pieces.Add(line);
+                         }
+                     }
+     }
+}
 }

@@ -11,5 +11,5 @@ public class Journal{
     }
 
     DateTime currentDateTime = DateTime.Now;
-    
+
 }
