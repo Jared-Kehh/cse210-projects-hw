@@ -47,7 +47,7 @@ public class Menu{
                 _display.saveJournal();
                     break;
                 case "4":
-                // _display.loadJournal();
+                _display.loadJournal();
                     break;
             }
             response="";
