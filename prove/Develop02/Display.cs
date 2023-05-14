@@ -1,3 +1,5 @@
+using System.IO;
+using System.Collections.Generic;
 public class Display{
     List<Prompt> _prompt = new List<Prompt>();
     List<Journal> _journal = new List<Journal>();
@@ -54,9 +56,10 @@ public class Display{
     public void loadJournal(){
                 Console.WriteLine("What is the file name called?");
                 string loadFile = Console.ReadLine();
-                string [] lines = File.ReadAllLines(loadFile);
+                string fileLoad = loadFile;
+                string [] lines = System.IO.File.ReadAllLines(fileLoad);
                 var pieces = new List<string>();
-                    foreach (string line in lines)
+                foreach (string line in lines)
                      {
                        if(line.Length != 0){
                              if(pieces.Count == 2){
@@ -68,5 +71,7 @@ public class Display{
                         }
                      }
      }
-
+     
+     
 }
+

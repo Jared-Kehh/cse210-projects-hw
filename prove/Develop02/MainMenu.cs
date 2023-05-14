@@ -2,6 +2,7 @@ public class Menu{
     private Display _display;
     private Prompt _prompt;
     private Journal _journal;
+    private string fill = "";
 
     public Menu(Display display)
     {
@@ -15,6 +16,7 @@ public class Menu{
     {
         _journal = journal;
     }
+
 
     public void DisplayMenu()
     {
@@ -37,7 +39,7 @@ public class Menu{
                     _display.GetRandomEntry();
                     Console.Write("");
                     string journalEntry = Console.ReadLine();
-                    _display.AddJournal(new Journal(journalEntry));
+                    _display.AddJournal(new Journal(journalEntry, fill));
                     break;
                 
                 case "2":
