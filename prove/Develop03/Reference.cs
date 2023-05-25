@@ -1,4 +1,4 @@
-class ScripReference{
+public class ScripReference{
     public string _book;   
     public int _verse;
     public int _chapter;
