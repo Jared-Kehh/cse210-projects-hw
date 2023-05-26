@@ -9,6 +9,7 @@ class Program
         _reference.DisplayVerse("Alma", 11, 7);
         _word.Display();
         _word.HideWord();
+        _word.ShowWord();
 
     }
 }

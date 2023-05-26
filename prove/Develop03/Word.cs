@@ -24,26 +24,34 @@ public class Word{
     }
 
     public string HideWord(){
-        
+    
         int plusNum = 0;
         int randomNumber = rnd.Next(0,inwords.Count);
         string randNumber = inwords[randomNumber];
         int numberOfletters = randNumber.Count();
-        string letter = randNumber;
-        letters.AddRange(letter);
-        int totalNum = letter.Count();
+        letters.AddRange(randNumber);
+        int totalNum = randNumber.Count();
         while (plusNum != totalNum){
             letters[plusNum] = '_';
             plusNum = plusNum+1;
         }
-        foreach (char letRep in letters){
-            Console.WriteLine(letRep);
-        }
         return randNumber;
-
     }
 
     public void ShowWord(){
+        string showWord = "";
+        foreach (char letRep in letters){
+            showWord = showWord + letRep;
+        }
+        Console.WriteLine(showWord);
+        inwords.Remove(randNumber);
+        inwords.Add(showWord);
+
+        foreach (string words in inwords){
+            Console.WriteLine(words);
+        }
+
+
 
     }
 }
