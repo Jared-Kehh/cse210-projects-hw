@@ -6,7 +6,7 @@ class Program
     {
         Console.WriteLine("Hello Develop04 World!");
 
-        Breathing _breathing = new Breathing();
-        _breathing.CountDown();
+        Menu _menu = new Menu();
+        _menu.DisplayMenu();
     }
 }

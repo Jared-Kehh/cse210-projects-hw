@@ -9,7 +9,8 @@ public class Menu{
                 Console.WriteLine("Menu Options:");
                 Console.WriteLine("1. Start breathing activity\n2. Start reflecting activity\n3. Start listing activity\n4. Quit");
                 Console.Write("Select a choice from the menu: ");
-                string numChoice = Console.ReadLine() ?? String.Empty;
+                response = Console.ReadLine() ?? String.Empty;
+                response = response.ToUpper();
 
             }
             switch(response){
@@ -18,7 +19,7 @@ public class Menu{
                 break;
                 
                 case "1":
-                _breathing.WelcomeDisplay();
+                _breathing.BreathingDisplay();
                 _breathing.BreathingActivity();
                 break;
             }
