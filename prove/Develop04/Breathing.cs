@@ -9,14 +9,28 @@ public class Breathing{
         // string num = Console.ReadLine();
         // numCountDown = Convert.ToInt32(num);
         Console.WriteLine("Get Ready...\n");
-        for (int i = 5; i > 0; i==)
+        List<string> animationStrings = new List<string>();
+        animationStrings.Add("|");
+        animationStrings.Add("/");
+        animationStrings.Add("-");
+        animationStrings.Add("\\");
+        animationStrings.Add("|");
+        animationStrings.Add("/");
+        animationStrings.Add("-");
+        animationStrings.Add("\\");
+
+        foreach (string s in animationStrings){
+            Console.Write(s);
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
+        }
+        Console.WriteLine("Breathe In...");
+        for (int i = 5; i > 0; i--)
         {
             Console.Write(i);
             Thread.Sleep(1000);
             Console.Write("\b \b");
         }
-
-        Console.WriteLine("Breathe In...");
 
     }
 
@@ -24,6 +38,6 @@ public class Breathing{
         Console.WriteLine("How long, in seconds, would you like for your session? ");
         string num = Console.ReadLine();
         numCountDown = Convert.ToInt32(num);
-
     }
+    
 }

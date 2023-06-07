@@ -1,5 +1,5 @@
 public class Menu{
-
+    Breathing _breathing = new Breathing();
     public void DisplayMenu(){
 
         string response= "";
@@ -17,6 +17,10 @@ public class Menu{
                 Environment.Exit(0);
                 break;
                 
+                case "1":
+                _breathing.WelcomeDisplay();
+                _breathing.BreathingActivity();
+                break;
             }
         }
 
