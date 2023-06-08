@@ -36,5 +36,13 @@ public class Base{
         Console.WriteLine($"Welcome to {_activityName}!\n");
     }
 
+    public void End(int time){
+        Console.WriteLine("Well Done!");
+        Animation();
+        Console.WriteLine();
+        Console.WriteLine($"You have completed another {time} seconds of the {_activityName}");
+        Animation();
+    }
+
     
 }

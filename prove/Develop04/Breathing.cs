@@ -11,16 +11,29 @@ public class Breathing : Base{
     }
 
     public void BreathingActivity(){
+        Console.WriteLine();
+        Console.Write("Breathe In...");
+        CountDown(6);
+        Console.WriteLine();
+        Console.Write("NOW Breathe Out...");
+        CountDown(4);
+        Console.WriteLine();
+    }
+
+    public void Exercise(){
         Console.Clear();
         Console.WriteLine("Get Ready...");
         Animation();
-        Console.WriteLine();
-        Console.Write("Breathe In...");
-        CountDown(numCountDown);
-        Console.WriteLine();
-        Console.Write("Breathe Out...");
-        CountDown(numCountDown);
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(numCountDown);
 
+        while(DateTime.Now < endTime){
+            BreathingActivity();
+        }
+    }
+
+    public void Done(){
+        End(numCountDown);
     }
     
 }
