@@ -13,17 +13,15 @@ public class Breathing : Base{
     public void BreathingActivity(){
         Console.WriteLine();
         Console.Write("Breathe In...");
-        CountDown(6);
+        CountDown(4);
         Console.WriteLine();
         Console.Write("NOW Breathe Out...");
-        CountDown(4);
+        CountDown(6);
         Console.WriteLine();
     }
 
-    public void Exercise(){
-        Console.Clear();
-        Console.WriteLine("Get Ready...");
-        Animation();
+    public void BreathingExercise(){
+        Start();
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(numCountDown);
 

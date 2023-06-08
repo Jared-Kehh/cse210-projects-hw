@@ -25,14 +25,25 @@ public class Menu{
                 
                 case "1":
                 _breathing.BreathingDisplay();
-                _breathing.Exercise();
+                _breathing.BreathingExercise();
                 _breathing.Done();
                 break;
 
                 case "2":
+                _reflecting.ReflectDisplay();
+                _reflecting.RandomMessage();
+                _reflecting.ReflectingExercise();
+                _reflecting.RandomQuestions();
+                _reflecting.Exercise();
+                _reflecting.Done();
                 break;
 
                 case "3":
+                _listing.ListDisplay();
+                _listing.AddingQuestions();
+                _listing.ListingActivity();
+                _listing.ListAnswers();
+                _listing.Done();
                 break;
 
             }

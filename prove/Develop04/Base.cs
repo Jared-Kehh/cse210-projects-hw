@@ -36,6 +36,12 @@ public class Base{
         Console.WriteLine($"Welcome to {_activityName}!\n");
     }
 
+    public void Start(){
+        Console.Clear();
+        Console.WriteLine("Get Ready...");
+        Animation();
+    }
+
     public void End(int time){
         Console.WriteLine("Well Done!");
         Animation();
