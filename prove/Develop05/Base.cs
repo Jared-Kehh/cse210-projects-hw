@@ -1,6 +1,7 @@
-public class Base{
+public abstract class Base{
     
     int points = 0;
+    List<string> goalList = new List<string>();
     public void ShowQuestions(){
         Console.Write("What is the name of your goal? ");
         string name = Console.ReadLine() ?? String.Empty;
@@ -25,5 +26,8 @@ public class Base{
         Console.WriteLine($"You have {points} points.");
     }
 
+    public void AddingGoals(){
+        
+    }
 
 }
