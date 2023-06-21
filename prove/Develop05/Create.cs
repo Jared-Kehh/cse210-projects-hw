@@ -12,6 +12,7 @@ public class Create : Base{
             ShowQuestions();
         }
         if (goalResp == "3"){
+            DisplayQuestions();
 
         }
     }
