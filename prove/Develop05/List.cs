@@ -1,4 +1,7 @@
-public class List : Create{
+public class List : Base{
     public void ListGoals()
-    {}
+    {
+        Console.WriteLine("The goals are:");
+        
+    }
 }

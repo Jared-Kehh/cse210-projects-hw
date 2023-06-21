@@ -16,13 +16,4 @@ public class Create : Base{
 
         }
     }
-    public void DisplayQuestions(){
-       ShowQuestions();
-       Console.Write("How many times does this goal need to be accomplished for a bonus? ");
-       string accomNum = Console.ReadLine() ?? String.Empty;
-       int _accomNum = Convert.ToInt32(accomNum);
-       Console.Write("What is the bonus for accomplishing it that many times? ");
-       string bonusNum = Console.ReadLine() ?? String.Empty;
-       int _bonusNum = Convert.ToInt32(bonusNum);
-    }
 }
