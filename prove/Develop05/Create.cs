@@ -18,13 +18,10 @@ public class Create : Base{
     }
     public void DisplayQuestions(){
        ShowQuestions();
-       Console.WriteLine("What is the amount of points associated with this goal? ");
-       string pointsgoal = Console.ReadLine() ?? String.Empty;
-       int _pointsgoal = Convert.ToInt32(pointsgoal);
-       Console.WriteLine("How many times does this goal need to be accomplished for a bonus? ");
+       Console.Write("How many times does this goal need to be accomplished for a bonus? ");
        string accomNum = Console.ReadLine() ?? String.Empty;
        int _accomNum = Convert.ToInt32(accomNum);
-       Console.WriteLine("What is the bonus for accomplishing it that many times? ");
+       Console.Write("What is the bonus for accomplishing it that many times? ");
        string bonusNum = Console.ReadLine() ?? String.Empty;
        int _bonusNum = Convert.ToInt32(bonusNum);
     }
