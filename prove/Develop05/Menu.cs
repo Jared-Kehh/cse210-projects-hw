@@ -1,6 +1,7 @@
-public class Menu : Base{
+public class Menu{
     Create newGoal = new Create();
     Record points = new Record();
+    Lists listGoal = new Lists();
     public void DisplayMenu(){
         string response = "";
         string [] options = {"1","2","3","4","5","6"};
@@ -20,7 +21,7 @@ public class Menu : Base{
                 break;
 
                 case "2":
-                ListingGoals();
+                listGoal.ListGoals();
                 break;
 
                 case "3":

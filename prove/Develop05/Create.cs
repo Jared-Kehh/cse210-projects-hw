@@ -1,4 +1,4 @@
-public class Create : Base{
+public class Create{
     public List<string> goalName = new List<string>();
     public List<string> goalDesc = new List<string>();
     public List<int> pointsGoal = new List<int>();
