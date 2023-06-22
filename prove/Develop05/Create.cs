@@ -7,9 +7,11 @@ public class Create : Base{
 
         if (goalResp == "1"){
             ShowQuestions();
+            AddingGoals();
         }
         if (goalResp == "2"){
             ShowQuestions();
+            AddingGoals();
         }
         if (goalResp == "3"){
             DisplayQuestions();

@@ -1,5 +1,6 @@
 public class Menu : Base{
     Create newGoal = new Create();
+    List listGoal = new List();
     public void DisplayMenu(){
         string response = "";
         string [] options = {"1","2","3","4","5","6"};
@@ -11,7 +12,6 @@ public class Menu : Base{
             Console.Write("Select a choice from the menu: ");
             response = Console.ReadLine() ?? String.Empty;
             response = response.ToUpper();
-            
             }
 
             switch(response){
@@ -20,6 +20,7 @@ public class Menu : Base{
                 break;
 
                 case "2":
+                listGoal.ListingGoals();
                 break;
 
                 case "3":

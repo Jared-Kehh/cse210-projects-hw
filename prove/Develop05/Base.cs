@@ -6,6 +6,9 @@ public abstract class Base{
     int _bonusNum_;
     int points = 0;
     List<string> goalName = new List<string>();
+    List<string> goalDesc = new List<string>();
+    List<int> pointsGoal = new List<int>();
+    
     public void ShowQuestions(){
         Console.Write("What is the name of your goal? ");
         string name = Console.ReadLine() ?? String.Empty;
@@ -36,7 +39,14 @@ public abstract class Base{
     }
 
     public void AddingGoals(){
-        
+        goalName.Add(_name);
+        goalDesc.Add(_desc);
+        pointsGoal.Add(_goalpoints);
     }
 
+    public void ListingGoals(){
+        foreach(string goalM in goalName){
+            Console.WriteLine(goalM);
+        }
+    }
 }
