@@ -58,7 +58,7 @@ public class Lists{
     public void ListGoals(){
         Console.WriteLine("The goals are:");
         foreach(Create namesofGoal in listsOfgoals){
-            Console.WriteLine($"{namesofGoal._goal} {namesofGoal._desc} {namesofGoal._points}");
+            Console.WriteLine($"[ ]{namesofGoal._goal} ({namesofGoal._desc})");
         }
 
     }
