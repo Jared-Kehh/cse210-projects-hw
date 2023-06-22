@@ -1,5 +1,4 @@
 public class Menu{
-    Create newGoal = new Create();
     Record points = new Record();
     Lists listGoal = new Lists();
     public void DisplayMenu(){
@@ -17,7 +16,7 @@ public class Menu{
 
             switch(response){
                 case "1":
-                newGoal.MenuTypeofGoals();
+                listGoal.MenuTypeofGoals();
                 break;
 
                 case "2":
