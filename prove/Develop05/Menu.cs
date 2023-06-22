@@ -1,11 +1,12 @@
 public class Menu : Base{
     Create newGoal = new Create();
+    Record points = new Record();
     public void DisplayMenu(){
         string response = "";
         string [] options = {"1","2","3","4","5","6"};
         while(response!="6"){
             while(options.Contains(response)==false){
-            ShowPoints();
+            points.ShowPoints();
             Console.WriteLine();
             Console.WriteLine("Menu Options:\n 1. Create New Goal\n 2. List Goals\n 3. Save Goals\n 4. Load Goals\n 5. Record Event\n 6. Quit");
             Console.Write("Select a choice from the menu: ");
@@ -15,9 +16,9 @@ public class Menu : Base{
 
             switch(response){
                 case "1":
-                MenuTypeofGoals();
+                newGoal.MenuTypeofGoals();
                 break;
-                
+
                 case "2":
                 ListingGoals();
                 break;
