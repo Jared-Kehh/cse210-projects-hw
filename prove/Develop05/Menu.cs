@@ -17,6 +17,7 @@ public class Menu : Base{
                 case "1":
                 MenuTypeofGoals();
                 break;
+                
                 case "2":
                 ListingGoals();
                 break;
