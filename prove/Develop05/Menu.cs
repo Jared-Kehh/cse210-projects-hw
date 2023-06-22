@@ -1,6 +1,5 @@
 public class Menu : Base{
     Create newGoal = new Create();
-    List listGoal = new List();
     public void DisplayMenu(){
         string response = "";
         string [] options = {"1","2","3","4","5","6"};
@@ -16,11 +15,10 @@ public class Menu : Base{
 
             switch(response){
                 case "1":
-                newGoal.MenuTypeofGoals();
+                MenuTypeofGoals();
                 break;
-
                 case "2":
-                listGoal.ListingGoals();
+                ListingGoals();
                 break;
 
                 case "3":
