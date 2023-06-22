@@ -1,8 +1,8 @@
 public class Create{
     public List<string> goalName = new List<string>();
-    public List<string> goalDesc = new List<string>();
-    public List<int> pointsGoal = new List<int>();
-    string _name;
+    List<string> goalDesc = new List<string>();
+    List<int> pointsGoal = new List<int>();
+    public string _name;
     string _desc;
     int _goalpoints;
     int _accomNum_;
