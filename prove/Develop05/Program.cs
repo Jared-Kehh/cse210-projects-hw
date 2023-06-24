@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Menu _menu = new Menu();
-        _menu.DisplayMenu();
+        EternalQuest quest = new EternalQuest();
+        quest.DisplayMenu();
     }
 }
