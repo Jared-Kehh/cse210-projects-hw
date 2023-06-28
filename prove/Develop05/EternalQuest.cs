@@ -161,7 +161,6 @@ public class EternalQuest
         var pieces = new List<string>();
         foreach (string line in lines){
             string[] parts = line.Split(",");
-
             var newGoal = new SimpleGoal(parts[0], parts[1], Convert.ToInt32(parts[2]));
             _goals.Add(newGoal);
         }
