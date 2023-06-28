@@ -14,6 +14,9 @@ class Program
         Comments ytcomments4 = new Comments("BloxyLmao","Only Matt can do a chicken sandwich tier list and finish all the food by himself");
         Comments ytcomments5 = new Comments("JJ_samurai","This was an nice video to watch today and this man is such an legend :]");
         Comments ytcomments6 = new Comments("Aceaidthe1st","Always makes me hungry. Keep up the good work!!!");
+        Comments ytcomments7 = new Comments("TS-bros","This is basically “ making my followers play Wheres Waldo");
+        Comments ytcomments8 = new Comments("PokeyMan","That man bruhhhh!");
+        Comments ytcomments9 = new Comments("Pinoy bros","I didn't know that this would be like this...");
 
         youtube.AddingComments(ytcomments);
         youtube.AddingComments(ytcomments1);
@@ -29,7 +32,12 @@ class Program
         youtube1.NumberComments();
         youtube1.DisplayComments();
         Console.WriteLine("===============================================");
+        youtube2.AddingComments(ytcomments7);
+        youtube2.AddingComments(ytcomments8);
+        youtube2.AddingComments(ytcomments9);
         youtube2.DisplayVideo();
+        youtube2.NumberComments();
+        youtube2.DisplayComments();
 
     }
 }
