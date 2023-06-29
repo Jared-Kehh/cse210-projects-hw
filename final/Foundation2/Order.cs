@@ -1,6 +1,7 @@
 public class Order{
     List<Products> _products = new List<Products>();
     List<Customer> _customer = new List<Customer>();
+    List<double> prices = new List<double>();
     Address shipping = new Address("1641 Maple Hill Rd", "Diamond Bar", "CA", "USA");
     Address packinglabel = new Address("289 S 345 E", "Provo", "UT", "USA");
     double _total = 0;
@@ -12,7 +13,7 @@ public class Order{
     public void ListingProducts(){
         Console.WriteLine("Items: ");
         foreach(Products items in _products){
-            Console.WriteLine(items._name);
+            Console.WriteLine($"{items._name} x{items._quantity} Product ID:{items._productid}");
         }
     }
 
@@ -23,7 +24,13 @@ public class Order{
     public void totalCost()
     {
         foreach(Products itemss in _products){
-            _total = itemss._price*itemss._quantity;
+            prices.Add(itemss._price*itemss._quantity);
+        }
+        foreach(double _prices in prices){
+            int numOne = 0;
+            int numTwo = 1;
+            _total = _prices + prices[numOne] + prices[numTwo];
+
         }
         if(shipping._country == "USA")
         {
