@@ -7,7 +7,7 @@ public class Reception : Event
         _email = email;
     }
 
-    public void recDesc()
+    public void RecpDesc()
     {
         Console.WriteLine($"The person's email who RSVP: {_email}");
     }

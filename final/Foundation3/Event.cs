@@ -13,17 +13,17 @@ public class Event{
         _time = time;
     }
 
-    public void Type()
+    public void TypeofEvent()
     {
         Console.WriteLine($"{_typeEvent} Event.\n");
     }
 
-    public void shortDesc()
+    public void ShortDesc()
     {
         Console.WriteLine($"{_typeEvent} Event\nEvent Title: {_title}\nDate: {_date}");
     }
 
-    public void standardDesc()
+    public void StandardDesc()
     {
         Console.WriteLine($"{_title}, {_description}, {_date}, {_time}");
     }
